@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .container {
+            margin-top: 14px;
+            padding: 20px;
+            width: 50%;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom, rgb(3, 139, 180), rgb(3, 180, 165));
+            color: white;
+
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid rgb(178, 219, 245);
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image img {
+            width: 60%;
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+
+        p {
+          
+            line-height: 1.5;
+            margin: 20px 0 10px;
+            font-size: 14px;
+        }
+
+     a {
+            font-size: 12px;
+            color: white;
+        }
+
+        button{
+            display: block;
+            margin: 20px auto;
+            width: 60%;
+            /* height: 40px; */
+            border: none;
+            background-color: rgb(37, 37, 37);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I Love Cake</h1>
+        <h2>Especially Chocolate Cake</h2>
+        <hr>
+        <div class="image">
+            <img src="image.jpg" alt="">
+        </div>
+        <hr>
+        <p> <strong>Chocolate Cake</strong> or chocolate gateau is a cake flavoured with melted chocolate, cocoa powder
+            or both. It can also include other ingredrients. These include fudge, vanilla creme and other sweeteners. In
+            every bits and pieces you can get the taste of chocolate. It is very soft and moist, when you take the first
+            bite of cake you will just forget everything around you!</p>
+        <a href="https://cafedelites.com/chocolate-cake/"><em>Read More</em></a><br><br>
+        <button class="buy-button">
+            TRY CAKE
+        </button>
+
+        <script>
+            let buyButton = document.querySelector(".buy-button");
+            function tryCake(){
+                let name = prompt('what is your name?');
+                let emoji = prompt('what is your favorite emoji?')
+
+                alert(
+                    'Thank you,' + 
+                    name + 
+                    '! We will keep in touch by email, mean while have lots of chocolate cake!'
+                    + emoji
+                );
+            }
+
+            
+            buyButton.addEventListener("click", tryCake);
+        </script>
+
+    </div>
+</body>
+
+</html>
